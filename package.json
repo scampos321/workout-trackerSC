@@ -19,7 +19,7 @@
   "homepage": "https://github.com/scampos321/workout-trackerSC#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "mongoose": "^6.0.12",
+    "mongoose": "^5.13.13",
     "nodemon": "^2.0.14"
   }
 }
