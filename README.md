@@ -17,14 +17,17 @@ Mongo Atlas Database.
 6. [Questions](#Questions)
 
 # Installation
-* npm install
-* npm run seed
+`git clone git@github.com:scampos321/workout-trackerSC.git`
+`cd workout-trackerSC`
+`npm install`
+`npm run seed`
 
 
 
 # Usage 
 * Use my heroku application [Heroku Deployment](https://powerful-headland-74056.herokuapp.com/)
-
+To run locally
+`npm start`
 
 # Technologies
 1. MongoDB
