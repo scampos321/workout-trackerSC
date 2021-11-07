@@ -3,8 +3,8 @@ const Workout = require("../models/workout.js");
 
 router.post("/api/workouts", ({ body }, res) => {
     Workout.create(body)
-    .then(workoutDB => {
-        res.json(workoutDB);
+    .then(dbWorkout => {
+        res.json(dbWorkout);
     })
     .catch(err => {
         res.status(400).json(err);
@@ -13,8 +13,8 @@ router.post("/api/workouts", ({ body }, res) => {
 
 router.post("/api/workouts/bulk", ({ body }, res) => {
     Workout.insertMany(body)
-    .then(workoutDB => {
-        res.json(workoutDB);
+    .then(dbWorkout => {
+        res.json(dbWorkout);
     })
     .catch(err => {
         res.status(400).json(err);
@@ -29,8 +29,8 @@ router.get("/api/workouts", (req, res) => {
         }
         }}
     ])
-    .then(workoutDB => {
-    res.json(workoutDB)
+    .then(dbWorkout => {
+    res.json(dbWorkout)
     })
     .catch(err => {
         res.status(400).json(err);
@@ -47,8 +47,8 @@ router.get("/api/workouts/range", (req, res) => {
     ]).sort( {
         _id: -1
     }).limit(10)
-    .then(workoutDB => {
-        res.json(workoutDB);
+    .then(dbWorkout => {
+        res.json(dbWorkout);
     })
     .catch(err => {
         res.status(400).json(err)
@@ -59,13 +59,13 @@ router.put("/api/workouts/:id", (req, res) => {
     Workout.updateOne(
         { _id: req.params.id },
         { $push: {exercises: req.body} },
-        (err, edit) => {
-            if (err) {
-                console.log(err);
-                res.send(err);
+        (error, edited) => {
+            if (error) {
+                console.log(error);
+                res.send(error);
             } else {
-                console.log(edit);
-                res.send(edit);
+                console.log(edited);
+                res.send(edited);
             }
         } 
     )
