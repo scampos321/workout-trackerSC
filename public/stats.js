@@ -27,7 +27,8 @@ function generatePalette() {
     const colors = generatePalette();
     let line = document.querySelector('#canvas').getContext('2d');
     let bar = document.querySelector('#canvas2').getContext('2d');
-    
+    // let pie = document.querySelector('#canvas3').getContext('2d');
+    // let pie2 = document.querySelector('#canvas4').getContext('2d');
     
     const daysOfWeek = [
       'Sunday',
@@ -133,8 +134,47 @@ function generatePalette() {
       },
     });
 
+    let pieChart = new Chart(pie, {
+      type: 'pie',
+      data: {
+        labels: workouts,
+        datasets: [
+        {
+          label: 'Exercises Performed',
+          backgroundColor: colors,
+          data: durations,
+         },
+        ],
+        },
+        options: {
+          title: {
+            display: true,
+            text: 'Exercises Performed',
+          },
+        },
+    
+    });
 
-   
+    let donutChart = new Chart(pie2, {
+      type: 'doughnut',
+      data: {
+        labels: workouts,
+        datasets: [
+          {
+            label: 'Exercises Performed',
+            backgroundColor: colors,
+            data: pounds,
+          },
+      ],
+      },
+      options: {
+        title: {
+          display: true,
+          text: 'Exercises Performed'
+        }
+      }
+    }); 
+  }
   
   function calculateTotalWeight(data) {
     const totals = [];
