@@ -39,9 +39,6 @@ To run locally
 
 
 # Screenshot of Demo
-<img width="1195" alt="Screen Shot 2021-07-16 at 12 35 25 AM" src="https://user-images.githubusercontent.com/85428896/140662436-f595eebc-0d9f-4847-868f-8e46ce9ed842.png">
-
-<img width="1200" alt="Screen Shot 2021-07-16 at 12 34 05 AM" src="https://user-images.githubusercontent.com/85428896/140662449-c8ab3629-a23e-4334-afdb-cdaa40cbf576.png">
 
 
 
